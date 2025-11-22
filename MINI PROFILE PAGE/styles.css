@@ -1,0 +1,118 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* garante box model previsível em pseudo-elementos */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-optical-sizing: auto;
+    background-color: #FFFDEC;
+}
+
+.container {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.profile-stats {
+    width: 100%;
+    font-size: 0;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    border: px solid #86A788;
+
+}
+
+
+.card {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    /* garantido globalmente, mas não custa repetir localmente */
+    width: calc((100% - 32px) / 3);
+    /* CORREÇÃO: 2 gaps de 16px = 32px */
+    margin-right: 16px;
+    padding: 0.75rem;
+    /* 12px */
+    background: #FFCFCF;
+    border: 3px solid #86A788;
+    border-radius: 8px;
+    font-size: 1rem;
+    /* restaura o tamanho do texto dentro do card */
+}
+
+/* remove margem direita do último card de cada linha */
+.card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card dt {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.card dd {
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+.profile__name {
+    max-width: 100%;
+    border: 3px solid #86A788;
+    border-radius: 8px;
+    padding: 0.75rem;
+    background: #FFCFCF;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile__description {
+    text-align: justify;
+    padding: 0.5rem;
+    margin: auto;
+}
+
+.profile__title {
+    padding: 0.1rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.sr-only {
+    font-size: small;
+}
